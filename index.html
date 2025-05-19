@@ -1,0 +1,118 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form action="submit_form.php" method="post" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name*</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="profilePicture">Profile Picture*</label>
+            <input type="file" id="profilePicture" name="profilePicture" required><br><br>
+        </fieldset>
+
+        <!-- Contact Information -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phoneNumber">Phone Number*</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required><br><br>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea><br><br>
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Education Background -->
+        <fieldset>
+            <legend>Education Background</legend>
+            <label for="qualification">Highest Qualification</label>
+            <select id="qualification" name="qualification">
+                <option value="graduate">Graduate</option>
+                <option value="postgraduate">Postgraduate</option>
+            </select><br><br>
+
+            <label for="specialization">Specialization</label>
+            <input type="text" id="specialization" name="specialization"><br><br>
+
+            <label for="graduationYear">Year of Graduation</label>
+            <input type="number" id="graduationYear" name="graduationYear"><br><br>
+        </fieldset>
+
+        <!-- Job Preferences -->
+        <fieldset>
+            <legend>Job Preferences</legend>
+            <label for="preferredRole">Preferred Role</label>
+            <input type="text" id="preferredRole" name="preferredRole"><br><br>
+
+            <label for="expectedSalary">Expected Salary</label>
+            <input type="text" id="expectedSalary" name="expectedSalary"><br><br>
+
+            <label>Preferred Locations</label>
+            <input type="checkbox" id="bangalore" name="preferredLocations" value="bangalore">
+            <label for="bangalore">Bangalore</label>
+            <input type="checkbox" id="delhi" name="preferredLocations" value="delhi">
+            <label for="delhi">Delhi</label>
+            <input type="checkbox" id="remote" name="preferredLocations" value="remote">
+            <label for="remote">Remote</label><br><br>
+
+            <label for="relocate">Willing to Relocate?</label>
+            <input type="checkbox" id="relocate" name="relocate"><br><br>
+        </fieldset>
+
+        <!-- Account Creation -->
+        <fieldset>
+            <legend>Create Account</legend>
+            <label for="username">Username*</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </fieldset>
+
+        <!-- Resume Upload -->
+        <fieldset>
+            <legend>Resume Upload</legend>
+            <label for="resume">Upload Resume*</label>
+            <input type="file" id="resume" name="resume" required><br><br>
+        </fieldset>
+
+        <!-- Agreement -->
+        <fieldset>
+            <legend>Agreement</legend>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
